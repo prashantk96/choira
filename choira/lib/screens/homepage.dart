@@ -198,7 +198,7 @@ class HorizontalScrollList extends StatelessWidget {
                     margin: const EdgeInsets.all(5),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.grey,
+                      color: Color(0xff14203B),
                     ),
                   ),
                 ),
@@ -207,7 +207,10 @@ class HorizontalScrollList extends StatelessWidget {
           if (!isFirstList && !isSecondList)
             Text(
               listText,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
         ],
       ),
