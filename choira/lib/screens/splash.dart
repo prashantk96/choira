@@ -14,8 +14,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Onboarding()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnBoardingScreen()));
     });
     super.initState();
   }
@@ -24,12 +23,7 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Color(0xff0A1733),
-      body: Center(
-          child: SizedBox(
-              width: 220,
-              height: 78,
-              child:
-                  Image(image: AssetImage('assets/images/splash/splash.png')))),
+      body: Center(child: SizedBox(width: 220, height: 78, child: Image(image: AssetImage('assets/images/splash/splash.png')))),
     );
   }
 }

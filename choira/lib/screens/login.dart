@@ -2,7 +2,6 @@ import 'package:choira/CustomButton.dart';
 import 'package:choira/screens/otp.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -32,8 +31,7 @@ class _LoginState extends State<Login> {
                   // width: 178,
                   margin: const EdgeInsets.fromLTRB(0, 0, 0, 29),
                   decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/login/Frame.png')),
+                    image: DecorationImage(image: AssetImage('assets/images/login/Frame.png')),
                   ),
                 ),
               ),
@@ -49,19 +47,20 @@ class _LoginState extends State<Login> {
                           Container(
                             alignment: Alignment.centerLeft,
                             margin: const EdgeInsets.only(bottom: 8),
-                            child: Text("Enter your mobile number",
-                                style: GoogleFonts.lato(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                  height: 1.5,
-                                  letterSpacing: 0.2,
-                                  color: const Color(0xffFFFFFF),
-                                )),
+                            child: Text(
+                              "Enter your mobile number",
+                              style: GoogleFonts.lato(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                height: 1.5,
+                                letterSpacing: 0.2,
+                                color: const Color(0xffFFFFFF),
+                              ),
+                            ),
                           ),
                           Container(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              // youwillreceivea4digitcodeverif (2:1435)
                               'You will receive a 4 digit code verification',
                               style: GoogleFonts.lato(
                                 fontSize: 14,
@@ -85,30 +84,30 @@ class _LoginState extends State<Login> {
                                   ),
                               child: TextFormField(
                                 controller: _myController,
-                                style: TextStyle(color: Colors.white),
+                                style: const TextStyle(color: Colors.white),
                                 keyboardType: TextInputType.number,
-
                                 // initialCountryCode: 'In',
-                                decoration: InputDecoration(
-                                  prefix: Text("+91"),
+                                decoration: const InputDecoration(
+                                  prefix: Text(
+                                    "+91",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                                   fillColor: Color(0xff14203b),
                                   filled: true,
-                                  enabledBorder: OutlineInputBorder(
-                                      borderSide:
-                                          BorderSide(color: Color(0xff14203b))),
+                                  enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color(0xff14203b))),
                                   border: OutlineInputBorder(),
                                 ),
                               )),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       CustomButton(
                         type: ButtonType.primary,
                         title: "Continue",
-                        color: Color(0xFFFFC701),
+                        color: const Color(0xFFFFC701),
+                        buttonTextColor: Colors.black,
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Otp()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Otp()));
                         },
                       ),
                     ],
