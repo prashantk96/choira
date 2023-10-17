@@ -22,7 +22,8 @@ class Otp extends StatelessWidget {
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 0, 0, 29),
                 decoration: const BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/login/Frame.png')),
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/login/Frame.png')),
                 ),
               ),
             ),
@@ -58,7 +59,9 @@ class Otp extends StatelessWidget {
                   const SizedBox(height: 20),
                   PinCodeTextField(
                     length: 4,
+                    textStyle: TextStyle(color: Colors.white),
                     obscureText: false,
+                    keyboardType: TextInputType.number,
                     animationType: AnimationType.fade,
                     animationDuration: Duration(milliseconds: 300),
                     onChanged: (value) {},
@@ -71,7 +74,7 @@ class Otp extends StatelessWidget {
                       activeFillColor: const Color(0XFF14203b),
                       selectedFillColor: const Color(0XFF14203b),
                       shape: PinCodeFieldShape.box,
-                      borderWidth: .1,
+                      borderWidth: .2,
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -82,7 +85,8 @@ class Otp extends StatelessWidget {
                   Spacer(),
                   CustomButton(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Homepage()));
                     },
                     color: const Color(0xFFFFC701),
                     buttonTextColor: Colors.white,

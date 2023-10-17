@@ -1,4 +1,5 @@
 import 'package:choira/CustomButton.dart';
+import 'package:choira/screens/homepage.dart';
 import 'package:choira/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -97,7 +98,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Container(
-                            margin: const EdgeInsets.fromLTRB(0, 3.15, 71.84, 0),
+                            margin:
+                                const EdgeInsets.fromLTRB(0, 3.15, 71.84, 0),
                             width: 101.4,
                             height: 101.4,
                             decoration: BoxDecoration(
@@ -159,14 +161,18 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       children: [
                         Text(
                           'Achieve all your\ngoals now',
-                          style: GoogleFonts.abyssinicaSil(textStyle: const TextStyle(fontSize: 34, color: Colors.white)),
+                          style: GoogleFonts.abyssinicaSil(
+                              textStyle: const TextStyle(
+                                  fontSize: 34, color: Colors.white)),
                         ),
                         const SizedBox(
                           height: 27,
                         ),
                         Text(
                           'Online courses to specialize in the entertainment field that lead the generation today.',
-                          style: GoogleFonts.aBeeZee(textStyle: const TextStyle(fontSize: 14, color: Colors.white)),
+                          style: GoogleFonts.aBeeZee(
+                              textStyle: const TextStyle(
+                                  fontSize: 14, color: Colors.white)),
                         ),
                       ],
                     ),
@@ -180,7 +186,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                         CustomButton(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Login()));
                           },
                           type: ButtonType.primary,
                           title: 'Login',
@@ -201,7 +210,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           height: 7.5,
                         ),
                         CustomButton(
-                            onTap: () => print('tapped'),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Homepage()));
+                            },
                             type: ButtonType.tertiary,
                             title: 'Guest mode',
                             buttonTextColor: Colors.white,

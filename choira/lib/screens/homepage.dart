@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
-  List Images = [
+  Homepage({super.key});
+  final List Images = [
     "assets/images/homepage/unsplash-b35lgevmtw.png",
     "assets/images/homepage/bulb-1.png",
     "assets/images/homepage/mask-group-Xep.png",
@@ -9,13 +10,13 @@ class Homepage extends StatelessWidget {
     "assets/images/homepage/mask-group.png"
   ];
 
-  List Images2 = [
+  final List Images2 = [
     "assets/images/homepage/xfsbw8w400x400-1.png",
     "assets/images/homepage/rectangle-15.png",
     "assets/images/homepage/rectangle-15-Q5v.png"
   ];
 
-  List Text1 = [
+  final List Text1 = [
     "Learn about the Beats",
     "Welcome to Music",
     "Learn basic song writing"
